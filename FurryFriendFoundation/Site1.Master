@@ -1,0 +1,261 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.Master.cs" Inherits="FurryFriendFoundation.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title> Furry Friends Rescue</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c8db3fae54.js" crossorigin="anonymous"></script>
+     <asp:ContentPlaceHolder ID="head" runat="server">
+        <style "text/css">
+            .mb-2{
+                color:black;
+            }
+            footer{
+                background-color: #D3D3D3;
+                color: darkgray;
+            }
+            .navbar-light .navbar-nav .nav-link {
+                color: darkgray;
+            }
+            .navbar-light .navbar-brand {
+                color: darkgray;
+            }
+            .navbar-light .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+            .navbar-light .navbar-toggler {
+                border-color: darkgray;
+            }
+            .nav-link {
+                color: darkgray;
+            }
+            .navbar-toggler {
+                background-color: #FFA500;
+            }
+            a{
+                color:black;
+            }
+            .navbar-logo {
+                border-radius: 50%;
+                border: 2px solid darkgray;
+                padding: 2px;
+            }
+            .btn-warning {
+                background-color: #ffc107;
+                color: #fff;
+                font-weight: bold;
+                font-family: Arial, sans-serif;
+                border: none;
+                padding: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                color:black;
+            }
+                        .btn-warning:hover {
+                background-color: #c79100;
+            }
+
+            .dropdown-menu {
+            background-color: #ffc107; /* Warm orange */
+        }
+        </style>
+         </asp:ContentPlaceHolder>
+</head>
+ <body style=" background-image: url('<%= ResolveUrl("~/images/carousel_img.jpg") %>');
+                background-repeat: no-repeat;
+                background-size: cover;               
+                margin: 0;
+                width:100%;
+                ">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <form id="form1" runat="server">
+        <!--Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color:#FFA500;">       
+    <a class="navbar-brand" href="HOMEpage.aspx">
+      <img src="<%= ResolveUrl("~/images/logoo.jpeg") %>" height="50" alt="" class="rounded-circle" loading="lazy" />
+
+    </a>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="HOMEpage.aspx">Furry Friends Resque</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="HOMEpage.aspx">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"href="Whoweare.aspx">Who Are We</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            What We Do
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="AnimalsCare.aspx">Animals in care</a></li>
+            <li><a class="dropdown-item" href="animalsforadoption">Animals For Adoption </a></li>
+            <li><a class="dropdown-item" href="sterilision.aspx">Sterilision</a></li>
+            <li><a class="dropdown-item" href="medicalhelp.aspx">Medical Help</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ways To Help</a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="Donation_Form.aspx">Donate</a></li>
+            <li><a class="dropdown-item" href="volunteer.aspx">Be a volunteer</a></li>
+            
+            <li><a class="dropdown-item" href="Adoption_Form.aspx">Adopt a pet</a></li>
+          </ul>
+        </li>
+      </ul> 
+          
+         <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-link active">
+                    <b><a class="nav-link" href="Addminlogin.aspx">
+                   <i class="fa-solid fa-user"></i>
+                    </a></b> 
+                </li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+     
+        </form>
+
+  <footer class="bg-secondary text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row my-4">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+          <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+    <img src="<%= ResolveUrl("~/images/logoo.jpeg") %>" height="200" width="200" alt="" class="rounded-circle" loading="lazy" />
+</div>
+
+          <p class="text-center fw-bold">Furry Friends Rescue is not just an animal shelter; it's a sanctuary for hopeful tails seeking warmth 
+and a forever home.a welcoming online space that bridges the gap between compassionate hearts and the furry friends in need. 
+</p>
+
+          <ul class="list-unstyled d-flex flex-row justify-content-center">
+           <li>
+              <a class="text-dark px-2" href="#!">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </li>
+               <li>
+              <a class="text-dark px-2" href="#!">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a class="text-dark ps-2" href="#!">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+          
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Animals</h5>
+
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="AnimalsCare.aspx"><i class="fas fa-paw pe-3"></i>Pets in care</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="medicalhelp.aspx" ><i class="fas fa-paw pe-3"></i>Medical care</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="adoptionprocess.aspx"><i class="fas fa-paw pe-3"></i>How to adopt?</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="adoptionapplication.aspx" ><i class="fas fa-paw pe-3"></i>Pets for adoption</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="volunteer.aspx" ><i class="fas fa-paw pe-3"></i>Volunteer</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Animals</h5>
+
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="Donation_Form.aspx"><i class="fas fa-paw pe-3"></i>Donate</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="whoweare.aspx"><i class="fas fa-paw pe-3"></i>About the shelter</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="donationform.aspx"><i class="fas fa-paw pe-3"></i>Sponcer a friend</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="adoptionapplication.aspx"><i class="fas fa-paw pe-3"></i>Adoption</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-dark ps-2" href="vounteer"><i class="fas fa-paw pe-3"></i>Volunteer activities</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Contact</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p><i class="fas fa-map-marker-alt pe-2"></i>Maharastra</p>
+            </li>
+            <li>
+              <p><i class="fas fa-phone pe-2"></i>+91 9403400461</p>
+            </li>
+            <li>
+              <p><i class="fas fa-envelope pe-2 mb-0"></i>furryfriendsresque@gmail.com.com</p>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2024 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">furryfriendsresque.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
