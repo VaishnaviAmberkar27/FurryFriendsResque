@@ -1,4 +1,5 @@
-#🐾 Furry Friends Rescue
+**🐾 Furry Friends Rescue**
+
 **🌟 Introduction**
 Furry Friends Rescue is a digital platform designed to address the pressing need for finding loving homes for animals in distress. It stands as a beacon of hope, offering a lifeline to animals in need of care and companionship while raising awareness about animal welfare. This web application streamlines the adoption process, simplifies donations, and manages volunteer recruitment to support shelter operations.
 
